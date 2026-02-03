@@ -1,0 +1,371 @@
+@import url("Themes.css");
+
+*  {
+    padding: 0;
+    /* margin: 0; */
+} 
+
+/* :root {
+    --cta: #06C46F;
+    --cta2: #00008B;
+    --link: #0044ff;
+    --secondary: #00aaff;
+    --Background: #ffffff;
+    --Background-Second: whitesmoke;
+    --corner1: 10px;
+} */
+
+
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-main);
+}
+
+h2, h3 {
+    color: var(--color-primary);
+}
+
+
+
+section {
+    min-height: 100px;
+    /* margin-bottom: 20px; */
+    padding: 10px;
+}
+
+.paralax {
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container :nth-child(1){
+    opacity: unset;
+
+}
+
+.bg-1 {
+    background-image: url("https://unviere.github.io/Unviere/Img/Stars.png");
+    min-height: 100vh;
+    display: flex;
+}
+
+.bg-2 {
+    background-image: url("../img/background_Pe.png");
+    min-height: 300px;
+}
+
+.bg-3 {
+    background-image: url("../img/portal.png");
+    min-height: 50vh;
+}
+
+.bg-4 {
+    background-image: url("../img/gameJam_thumb.webp");
+    min-height: 50vh;
+}
+
+.bg-5 {
+    background-image: url("../img/sunny_desert.jpg");
+    min-height: 50vh;
+}
+
+
+.bg-6 {
+    background-image: url("../img/danger.jpg");
+    min-height: 100vh;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 10px;
+}
+.hero-text h1,
+.hero-text h2,
+.hero-text p {
+    color: var(--text-inverted);
+}
+
+.hero-text h1 {
+    font-weight: 600;
+    color: var( --color-accent);
+}
+
+.hero-text h2 {
+    font-size: 20px;
+}
+
+.about {
+    position: relative;
+}
+
+.about details {
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about details img{
+    justify-self: center;
+    display: flex;
+    margin: 5px;
+}
+
+.about details ul{
+    margin-left: 20px;
+}
+
+.about summary {
+    /* border-bottom: none; */
+    /* border-radius: var(--corner1); */
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.about summary::marker {
+    content: "+ "; /* Default marker */
+    background-color: var( --color-accent);
+}
+
+.about details[open] > summary::marker {
+    content: "− "; /* Marker when expanded */
+}
+
+.about details[open] > summary {
+    border-bottom: 2px solid var(--color-accent-alt);
+}
+
+.msgs {
+    border: 2px solid var(--color-accent-alt)!important;
+
+}
+
+.msgs-sum {
+    border-bottom: 2px solid var(--color-accent)!important;
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    min-width: 150px;
+    height: 50px;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.redirect {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 1px;
+    left: 50%;
+    bottom: -40%;
+    z-index: 200;
+    gap: 5px;
+}
+
+.start {
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.psudo-link {
+    color: var(--color-link);
+}
+
+/*comunities*/
+
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  
+  to{
+    transform: translateX(-1560px);
+  }
+}
+
+
+
+.communities {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.Comunity-scroller {
+    height: 20%;
+    width: max-content; /* Let it grow to fit all children */
+    padding: 50px 10px;
+    margin: 0px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    animation: 10s slide infinite linear;
+}
+
+.Comunity-scroller:hover{
+  /* animation-play-state: paused; */
+  
+}
+
+.Comunity-Card {
+    background-color: var(--bg-secondary);
+    height: 300px;
+    min-width: 500px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 150px 50px 1fr;
+    grid-template-rows: 100px 200px;
+    grid-template-areas: 
+        'Stats Title Title'
+        'Thumb Thumb Desc';
+    border-radius: var(--border-radius);
+
+    
+}
+
+.Comunity-Card-Thumb {
+    grid-area: Thumb;
+}
+
+.Comunity-Card-Title{
+    grid-area: Title;
+}
+
+.Comunity-Card-stats {
+    grid-area: Stats;
+    font-size: 25px;
+    text-align: center;
+}
+
+.Comunity-Card-stats span{
+    color: var(--color-accent-alt);
+    font-weight: 900;
+}
+
+.Comunity-Card-desc {
+    grid-area: Desc;
+    overflow-y: auto;
+}
+
+
+
+@media (max-width:700px) {
+
+    @keyframes slideSmall{
+        from{
+            transform: translateX(0);
+        }
+  
+        to{
+         transform: translateX(calc(-200px + 20px * 3));
+        }
+    }
+
+    .Comunity-scroller {
+        height: 20%;
+        width: max-content;
+        gap: 20px;
+        animation: 10s slideSmall infinite linear;
+    }
+
+    .redirect {
+
+        width: 200px;
+        height: 100px;
+        left: 40%;
+        bottom: -30%;
+    } 
+
+    .button {
+        min-width: 50px;
+        height: 20px;
+        padding: 2px;
+        font-size: 10px;
+    }
+
+    .Comunity-Card {
+      height: 150px;
+      min-width: 300px;
+      grid-template-columns: 100px 1fr;
+      grid-template-rows: 50px 100px;
+    }
+
+    .Comunity-Card-Title {
+        font-size: 15px;
+    }
+
+    .Comunity-Card-stats {
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width:320px) {
+    .redirect {
+
+        width: 200px;
+        height: 100px;
+        left: 30%;
+        bottom: -40%;
+    } 
+
+    .Comunity-scroller {
+    height: 20%;
+    width: 100%;
+    padding: 50px 10px;
+    overflow: hidden;
+}
+
+
+
+
+    
+}

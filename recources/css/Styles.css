@@ -1,0 +1,131 @@
+:root {
+  /* 🌟 Brand Identity Colors */
+  --color-primary: #000744;          /* Dark blue, use for header/nav background, brand elements */
+  --color-secondary: #00aaff;        /* Accent blue, use for secondary buttons or highlights */
+  --color-accent: #06C46F;           /* CTA green, for success or confirmation actions */
+  --color-accent-alt: #00008B;       /* CTA alternative, for emphasis or contrast */
+  --color-link: #0044ff;             /* Hyperlinks */
+
+  /* 🎨 Neutral Backgrounds */
+  --bg-main: #ffffff;                /* Page background */
+  --bg-secondary: whitesmoke;           /* Card, section, and container background */
+  --bg-navbar: var(--bg-secondary);/* Navbar background */
+  --bg-footer: #000033; 
+  
+   --BgSlightDiference: #dbf5fd;/* Footer background or darker section */
+
+  /* 🧱 Border and Shadows */
+  --border-radius: 10px;
+  --border-color: #e0e0e0;           /* For cards, inputs, etc */
+  --NavBar-DropDBorder: lightgray;
+  --box-shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --BoxShadow-Header: 1px 1px 9px grey;
+  --BoxShadow-Menu: 5px 0 5px -5px grey;
+  --BoxShadow-Header-DropD: 1px 10px 12px -3px grey, -1px 12px 10px -3px grey;
+  --BoxShadow-card: 1px 5px 9px -3px grey;
+
+
+  /* ✍️ Typography */
+  --text-primary: #000000;           /* Main body text */
+  --text-secondary: #444444;         /* Less prominent text */
+  --text-inverted: #ffffff;          /* Text on dark backgrounds */
+  --text-muted: #888888;             /* Hints, placeholders */
+
+  /* 🧩 Buttons */
+  --btn-primary-bg: var(--color-accent);
+  --btn-primary-text: var(--text-primary);
+  --btn-primary-hover: #00693a;
+
+  --btn-secondary-bg: var(--color-secondary);
+  --btn-secondary-text: var(--text-inverted);
+  --btn-secondary-hover: #0088cc;
+
+  --btn-disabled-bg: #cccccc;
+  --btn-disabled-text: #666666;
+
+  /* 📝 Inputs & Forms */
+  --input-bg: #ffffff;
+  --input-border: var(--border-color);
+  --input-focus: var(--color-secondary);
+  --input-Correct: var(--color-accent);
+
+ 
+
+  /* 🧭 Navigation & Header */
+  --navbar-text: var(--text-primary);
+  --navbar-hover: var(--color-accent);
+
+  --header-bg: var(--bg-secondary);
+  --header-text: var(--text-primary);
+
+  /* general */
+
+  --Error: #ff0000;
+}
+
+
+/* site positionering */
+
+body {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px;
+    margin: 0px;
+    /* grid-template-columns: 200px 1fr; */
+}
+
+#container {
+    max-width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.leftNav-padding {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    min-width: 150px;
+}
+
+
+/* general stuff */
+.link {
+    color: var(--color-link);
+}
+
+.link:hover {
+    color: var(--color-secondary);
+}
+
+.link:visited {
+    color: var(--btn-primary-hover);
+}
+
+.cta {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border: none;
+}
+
+.cta:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+.ButtonFullBorder {
+    border-radius: 100px;
+}
+
+.ButtonSmallBorder {
+    border-radius: var(--border-radius);
+}
+
+.chost {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--color-accent);
+}
+
+.defould {
+    background-color: var(--text-primary);
+    color: var(--bg-main);
+}

@@ -1,0 +1,242 @@
+  @import url("../Styles.css");
+  
+  #check:checked ~ section {
+    margin-left: 150px;
+    margin-right: 0px;
+    width: 60%;
+    
+  }
+  .home{
+    width: 70px;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+      header {
+    
+    transition: .2s;
+    height: 35px!important;
+  }
+  
+  .up {
+    height: 100%;
+    
+  }
+  
+  .menu {
+    
+  
+    top: 35px;
+  }
+  
+  .sidebar-toggle #pinned, .sidebar-toggle #unpinned{
+    top:35px;
+    /*margin-top: 50px;*/
+    margin-left: 120px;
+    
+  }
+  /* General mobile navlist styles */
+
+  .navlist-mobile {
+    display: flex; 
+    flex-direction: column;
+    width: 100%; 
+    height: auto; 
+    align-items: flex-start; 
+    justify-content: center; 
+    background: transparent; 
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+  }
+
+  .navlist-mobile li {
+list-style-type: none;
+margin: 5px 0; /* Add spacing between main list items */
+align-content: center;
+  }
+
+  .navlist-mobile a {
+    background: transparent; 
+    color: black; 
+    font-size: 15px; 
+    font-weight: 600; 
+    position: relative; 
+    padding: 10px 0; 
+    margin-left: 10px; 
+    transition: color 0.55s ease; 
+    text-decoration: none; 
+    text-align: left; 
+    
+    height: 100%; 
+  }
+  
+  .navlist-mobile a::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    height: 90%;
+    width: 5px;
+    margin-left: -10px;
+    background-color:  var(--color-primary);
+    border-radius: 5px;
+    transform: translateY(-50%) scaleY(0);
+    transition: transform 0.55s ease;
+  }
+  
+  .navlist-mobile a:hover::after {
+    transform: translateY(-50%) scaleY(1);
+  }
+
+  /* dropdowns mobile */
+
+  .dropd-mobile ul {
+	display: flex;
+	flex-direction: column;
+	min-width: 100%;
+	visibility: hidden;
+    padding: 0px;
+}
+
+.dropd-mobile:hover ul {
+	visibility: visible;
+    position: relative;
+
+}
+
+.dropd-mobile {
+	position: relative;
+	
+}
+
+.dropd-mobile ul {
+	position: absolute;
+	top: 0px;
+    left: 0px;
+}
+
+/* .dropd-mobile ul li:last-child{
+	border-top-right-radius: 0px!important;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom: 1px solid var(--border);
+} */
+
+/* .dropd-mobile ul li {
+    background-color: var(--background-header);
+	border-left: 1px solid var(--border); 
+	border-right: 1px solid var(--border)!important;
+	/* box-shadow: 10px 10px 20px rgb(73, 73, 73); */
+/* }  */
+
+/* remove */
+
+
+  .mobile-navlist {
+    display: flex;
+    
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    flex-direction: column; /* Keep items in a column */
+    
+    left: 0;
+    
+    width: 100%;
+    z-index: 1001;
+    background-color: whitesmoke;
+    
+    
+    
+  }
+  
+  .mobile-navlist li {
+    margin: 5px 0; /* Add spacing between main list items */
+    align-content: center;
+    list-style-type: none;
+  }
+  
+  
+  #navh,
+  #navb {
+    background: transparent; 
+    color: black; 
+    font-size: 15px; 
+    font-weight: 600; 
+    position: relative; 
+    padding: 10px 0; 
+    margin-left: 10px; 
+    transition: color 0.55s ease; 
+    text-decoration: none; 
+    text-align: left; 
+    
+    height: 100%; 
+  }
+  
+  #navb {
+    display: block;
+  }
+  #navh::after,
+  #navb::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    height: 90%;
+    width: 5px;
+    margin-left: -10px;
+    background-color:  #06c46f;
+    border-radius: 5px;
+    transform: translateY(-50%) scaleY(0);
+    transition: transform 0.55s ease;
+  }
+  #navh:hover::after,
+  #navb:hover::after {
+    transform: translateY(-50%) scaleY(1);
+  }
+  
+  /* Community Dropdown styles */
+  .mob-community-drop {
+    display: none; /* Hide the dropdown items initially */
+    position: relative; /* Keep position relative for consistent alignment */
+    z-index: 100000; /* Ensure they appear above other elements */
+    
+    margin-top: 5px; /* Add spacing above the dropdown items */
+    background: #f9f9f9; /* Light background for dropdown for better visibility */
+    border-radius: 4px; /* Rounded corners for dropdown items */
+  }
+  
+  .mob-community-drop-parent {
+    position: relative; /* Make parent relative for child positioning */
+    
+  }
+  
+  .mob-community-drop-parent:hover .mob-community-drop {
+    display: block; /* Show the dropdown items when hovering over the parent */
+  }
+  
+  
+  
+  /* More Dropdown styles */
+  .mob-more-drop {
+    display: none; /* Hide the dropdown items initially */
+    position: relative; /* Keep position relative for consistent alignment */
+    z-index: 100000; /* Ensure they appear above other elements */
+    margin-top: 5px; /* Add spacing above the dropdown items */
+    background: #f9f9f9; /* Light background for dropdown for better visibility */
+    border-radius: 4px; /* Rounded corners for dropdown items */
+  }
+  
+  .mob-more-drop-parent {
+    position: relative; /* Make parent relative for child positioning */
+  }
+  
+  .mob-more-drop-parent:hover .mob-more-drop {
+    display: block; /* Show the dropdown items when hovering over the parent */
+  }
+  
+  .game-top-navb-left-sticky {
+    display: none;
+  }
+  

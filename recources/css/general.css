@@ -1,0 +1,58 @@
+@import url("Themes.css");
+
+:root {
+  --link: #00aaff;
+  --link_hover: #06c46f;
+  --link_visited: #00a159;
+  --cta: #06c46f;
+}
+
+/* site positionering */
+
+body {
+    display: flex;
+    flex-direction: row-reverse;
+    /* grid-template-columns: 200px 1fr; */
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+.leftNav-padding {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    min-width: 150px;
+}
+
+
+/* general stuff */
+.link {
+    color: var(--color-link);
+}
+
+.link:hover {
+    color: var(--color-secondary);
+}
+
+.link:visited {
+    color: var(--btn-primary-hover);
+}
+
+.cta {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+}
+
+.chost {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--color-accent);
+}
+
+.defould {
+    background-color: var(--text-primary);
+    color: var(--bg-main);
+}
